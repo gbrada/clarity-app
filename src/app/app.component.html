@@ -1,0 +1,118 @@
+<div class="main-container">
+  <div class="alert alert-app-level">
+    <div class="alert-items">
+      <div class="alert-item static">
+        <div class="alert-icon-wrapper">
+          <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+        </div>
+        <span class="alert-text">
+          This alert is in the middle of the page.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="header-6">
+    <div class="branding">
+      <a href="#" class="nav-link">
+        <clr-icon shape="vm-bug"></clr-icon>
+        <span class="title">Project Clarity</span>
+      </a>
+    </div>
+    <div class="header-nav">
+      <a href="#" class="nav-link nav-icon">
+        <clr-icon shape="cloud"></clr-icon>
+      </a>
+      <a href="#" class="active nav-link nav-icon">
+        <clr-icon shape="folder"></clr-icon>
+      </a>
+    </div>
+    <form class="search">
+      <label for="search_input">
+        <input id="search_input" type="text" placeholder="Search for keywords...">
+      </label>
+    </form>
+    <div class="header-actions">
+      <a href="#" class="nav-link nav-icon">
+        <clr-icon shape="cog"></clr-icon>
+      </a>
+      <clr-dropdown>
+        <button class="nav-icon" clrDropdownTrigger>
+          <clr-icon shape="user"></clr-icon>
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a href="#" clrDropdownItem>About</a>
+          <a href="#" clrDropdownItem>Preferences</a>
+          <a href="#" clrDropdownItem>Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </header>
+
+  <nav class="subnav">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cloud</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tenants</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" [(clrVerticalNavCollapsed)]="collapsed">
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+        Normal
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Pidgey
+          </a>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Snorlax
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="flame" clrVerticalNavIcon></clr-icon>
+        Fire
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Charmander
+          </a>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Charizard
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="bolt" clrVerticalNavIcon></clr-icon>
+        Electric
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Pikachu
+          </a>
+          <a clrVerticalNavLink routerLink="#" routerLinkActive="active">
+            Raichu
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <a clrVerticalNavLink routerLinkActive="active" routerLink="#">
+        <clr-icon shape="certificate" clrVerticalNavIcon></clr-icon>
+        Credit
+      </a>
+    </clr-vertical-nav>
+  </div>
+
+</div>
