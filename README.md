@@ -28,4 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Electron
 
+Installation d'Electron : `npm i -D electron@latest`
+
 Run `npm run electron` 
